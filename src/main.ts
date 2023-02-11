@@ -4,11 +4,12 @@ import * as path from "path";
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    height: 600,
+    height: 800,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
+      nodeIntegration: true,
     },
-    width: 800,
+    width: 1200,
   });
 
   // and load the index.html of the app.
@@ -42,3 +43,4 @@ app.on("window-all-closed", () => {
 
 // In this file you can include the rest of your app"s specific main process
 // code. You can also put them in separate files and require them here.
+

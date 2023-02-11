@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "Torrent Client of the Future",
   "main": "index.js",
-  "engine": "18.9.0",
+  "engine": "19.5.0",
   "scripts": {
     "build": "tsc",
-    "watch": "tsc -w",
-    "start": "npm run build && electron ./dist/main.js"
+    "dev": "concurrently \"tsc -w\" \"npm run start\"",
+    "start": "electron ./dist/main.js"
   },
   "repository": {
     "type": "git",
@@ -20,10 +20,14 @@
   },
   "homepage": "https://github.com/DavFeng1/litetorrent#readme",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.33.0",
-    "@typescript-eslint/parser": "^4.33.0",
-    "electron": "^21.3.1",
-    "eslint": "^7.32.0",
-    "typescript": "^4.9.3"
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "concurrently": "^7.6.0",
+    "eslint": "^8.33.0",
+    "tsc-watch": "^6.0.0",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "electron": "^23.0.0"
   }
 }
